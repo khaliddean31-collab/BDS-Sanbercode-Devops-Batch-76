@@ -1,0 +1,7 @@
+Data Peserta Bootcamp Digital Skill Devops
+1. Nama: Dean Khalid Nurman
+2. Email: khaliddean31@gmail.com
+3. Sistem Operasi yang digunakan: Rocky Linux 10.1 Workstation 
+4. Akun Gitlab/Github: khaliddean31-collab
+5. Akun Telegram: Dean Khalid
+6. Bahasa Pemrograman/Stack Yang dikuasai: FE: Next js, DB:Mongo DB, BE:Express Js, Linux system administrator
