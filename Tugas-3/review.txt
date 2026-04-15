@@ -1,0 +1,9 @@
+Saran Perbaikan dari AI:
+1.  Penanganan Error (Error Handling): Script saat ini tidak memeriksa apakah perintah `cp` berhasil atau tidak. Sebaiknya tambahkan logika untuk memverifikasi kesuksesan setiap langkah.
+2.  Validasi File Sumber: Script tidak memeriksa apakah file `syslog.txt` benar-benar ada sebelum mencoba menyalinnya. Jika file tidak ada, script akan menghasilkan error "No such file or directory".
+3.  Penggunaan Variable: Untuk file yang sering digunakan, sebaiknya didefinisikan dalam variabel agar mudah diubah di kemudian hari.
+4.  Timestamp untuk Backup: Sangat disarankan untuk menambahkan timestamp (waktu/tanggal) pada folder atau file backup agar tidak menimpa backup sebelumnya secara terus-menerus.
+5.  Feedback Pengguna: Tambahkan pesan sukses di akhir script untuk memberi tahu pengguna bahwa proses telah selesai dengan benar.
+
+Pendapat Saya:
+Saya setuju dengan hasil review tersebut. Untuk penggunaan sederhana, script asli sudah cukup fungsional ("it works"). Namun, untuk standar DevOps atau lingkungan produksi, script harus lebih "robust" (tahan banting). Penambahan validasi file dan error handling sangat penting untuk mencegah script "gagal diam-diam". Penggunaan timestamp juga krusial jika kita ingin menyimpan riwayat log dari waktu ke waktu.
