@@ -1,0 +1,8 @@
+PM2
+Lebih praktis dan cepat digunakan
+Cocok untuk development dan deployment cepat
+Sudah menyediakan fitur monitoring bawaan
+systemd
+Lebih kompleks karena perlu konfigurasi manual
+Lebih stabil karena berjalan langsung sebagai service Linux
+Lebih ringan dan cocok untuk production server
