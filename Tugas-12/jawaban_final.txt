@@ -1,0 +1,5 @@
+Hemat Resource: Tiap service (kayak database) itu makan RAM sama CPU di background. Kalau yang nggak kepake dihapus, beban server jadi enteng dan performa aplikasi utama makin ngebut.
+
+Lebih Aman: Makin dikit paket yang nempel, makin dikit juga celah buat diserang (attack surface). Service yang nggak keurus biasanya rawan kena exploit, jadi mending port yang nggak perlu ditutup aja.
+
+Disk Jadi Bersih: Pake perintah purge biar file konfigurasi lama nggak menumpuk. Selain storage jadi lega, ini juga buat cegah error atau konflik konfigurasi ke depannya.
