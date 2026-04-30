@@ -1,0 +1,22 @@
+name: Tugas-14-Artifacts
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Create Build Directory
+        run: |
+          mkdir dist
+          echo "<html><body><h1>Tugas 14 Berhasil</h1></body></html>" > dist/index.html
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hasil-build-dean
+          path: dist/
