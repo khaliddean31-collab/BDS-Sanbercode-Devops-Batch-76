@@ -1,10 +1,11 @@
-name: Tugas-15-Perbaikan
+name: Tugas-15-fix-gatau-kapan-selesai
 
 on:
   push:
     branches: [ "main" ]
 
 jobs:
+  
   build-stage:
     runs-on: ubuntu-latest
     steps:
@@ -22,6 +23,7 @@ jobs:
           name: web-content
           path: dist/
 
+  
   deploy-stage:
     runs-on: ubuntu-latest
     needs: build-stage
@@ -38,8 +40,8 @@ jobs:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
-          source: "deploy-folder/"
-          target: "/home/${{ secrets.VPS_USERNAME }}/tugas-15"
+          source: "deploy-folder/*"
+          target: "/root/tugas-15"
           strip_components: 1
 
       - name: Finalize & Check via SSH
@@ -49,5 +51,5 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            echo "Mengecek hasil deploy..."
-            ls -la /home/${{ secrets.VPS_USERNAME }}/tugas-15
+            echo "Mengecek isi folder /root/tugas-15..."
+            ls -la /root/tugas-15
